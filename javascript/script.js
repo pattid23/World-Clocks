@@ -24,6 +24,52 @@ function updateMadridTime() {
   );
 }
 
+updateMadridTime();
+setInterval(updateMadridTime, 1000);
+
+function updateLondonTime() {
+  let londonElement = document.querySelector("#london");
+  let londonDateElement = londonElement.querySelector(".date");
+  let londonTimeElement = londonElement.querySelector(".time");
+  let londonTime = moment().tz("Europe/London");
+
+  londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
+  londonTimeElement.innerHTML = londonTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+
+updateLondonTime();
+setInterval(updateLondonTime, 1000);
+
+function updateTokyoTime() {
+  let tokyoElement = document.querySelector("#tokyo");
+  let tokyoDateElement = tokyoElement.querySelector(".date");
+  let tokyoTimeElement = tokyoElement.querySelector(".time");
+  let tokyoTime = moment().tz("Asia/Tokyo");
+
+  tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+  tokyoTimeElement.innerHTML = tokyoTime.format("h:mm:ss [<small>]A[</small>]");
+}
+
+updateTokyoTime();
+setInterval(updateTokyoTime, 1000);
+
+function updateHonoluluTime() {
+  let honoluluElement = document.querySelector("#honolulu");
+  let honoluluDateElement = honoluluElement.querySelector(".date");
+  let honoluluTimeElement = honoluluElement.querySelector(".time");
+  let honoluluTime = moment().tz("Pacific/Honolulu");
+
+  honoluluDateElement.innerHTML = honoluluTime.format("MMMM Do YYYY");
+  honoluluTimeElement.innerHTML = honoluluTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+
+updateHonoluluTime();
+setInterval(updateHonoluluTime, 1000);
+
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
@@ -40,14 +86,11 @@ function updateCity(event) {
         </div>
         <div class="time">${cityTime.format(
           "h:mm:ss"
-        )} [<small>]${cityTime.format("A")}[</small>]</div>
+        )} <small>${cityTime.format("A")}</small></div>
       </div>
       <a href="index.html">Go Back</a>
       `;
 }
-
-updateMadridTime();
-setInterval(updateMadridTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 
