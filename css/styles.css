@@ -1,12 +1,16 @@
 body {
-  background-color: #f5f4f5;
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #d4d4d4 0%, #b8b8b0 100%);
+  background-image: url(https://i.etsystatic.com/39019599/r/il/ff2eec/4927512779/il_1588xN.4927512779_4a8p.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: sans-serif;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 550px;
   margin: 60px auto;
-  background: white;
+  background: rgba(0, 0, 0, 0.2);
   padding: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
@@ -22,13 +26,15 @@ body {
 
 h1 {
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 36px;
+  color: white;
 }
 
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
+  color: white;
 }
 
 select {
@@ -41,11 +47,13 @@ select {
 
 .date {
   opacity: 0.7;
+  color: white;
 }
 
 .time {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
+  color: white;
 }
 
 .time small {
@@ -57,5 +65,9 @@ select {
 footer {
   text-align: center;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.7);
 }
